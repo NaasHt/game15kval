@@ -17,6 +17,7 @@
         <item name="android:layout_width">60dp</item>
         <item name="android:layout_height">60dp</item>
         <item name="android:onClick">buttononClick</item>
+
     </style>
 
 </resources>

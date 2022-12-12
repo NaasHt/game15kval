@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/osipo/game15kval/app/src/main/res/layout/activity_game.xml" value="0.5546875" />
-        <entry key="..\:/Users/osipo/game15kval/app/src/main/res/layout/activity_main.xml" value="0.5546875" />
+        <entry key="..\:/Users/osipo/game15kval/app/src/main/res/layout/activity_game_easy.xml" value="0.4276041666666667" />
+        <entry key="..\:/Users/osipo/game15kval/app/src/main/res/layout/activity_log_in.xml" value="0.5546875" />
+        <entry key="..\:/Users/osipo/game15kval/app/src/main/res/layout/activity_main.xml" value="0.18450184501845018" />
+        <entry key="..\:/Users/osipo/game15kval/app/src/main/res/layout/activity_registration.xml" value="0.174496644295302" />
+        <entry key="..\:/Users/osipo/game15kval/app/src/main/res/menu/level.xml" value="0.5546875" />
       </map>
     </option>
   </component>
