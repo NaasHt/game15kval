@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "691568909427",
-    "project_id": "gamekval",
-    "storage_bucket": "gamekval.appspot.com"
+    "project_number": "492063390800",
+    "project_id": "game-15-c9479",
+    "storage_bucket": "game-15-c9479.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:691568909427:android:47d445b226452b91715e06",
+        "mobilesdk_app_id": "1:492063390800:android:439813f60133ee8c99a555",
         "android_client_info": {
-          "package_name": "com.company.game15"
+          "package_name": "com.example.game15kval"
         }
       },
       "oauth_client": [
         {
-          "client_id": "691568909427-48u8fjaosprlkdounu3dc8ot0eqppoi1.apps.googleusercontent.com",
+          "client_id": "492063390800-gpailtvbd7i4hqm1k1sob0gnle8jlbn2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCeBLtTe9TAZWzDeXZhMT4YyJxwPLVAVC4"
+          "current_key": "AIzaSyDk4lZgyjmg0xwDgi77HkrjTOdyJcLkgSo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "691568909427-48u8fjaosprlkdounu3dc8ot0eqppoi1.apps.googleusercontent.com",
+              "client_id": "492063390800-gpailtvbd7i4hqm1k1sob0gnle8jlbn2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,5 +1,6 @@
 package com.example.game15kval;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -21,12 +22,12 @@ public class gameActivityEasy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_game_easy);
 
         loadViews();
         loadNumbers();
         generateNumbers();
-        loadDataToView();
+        loadDataToView();//mistake
     }
 
     private void loadDataToView(){
@@ -36,12 +37,12 @@ public class gameActivityEasy extends AppCompatActivity {
             buttons[i/2][i%2].setText(String.valueOf(tiles[i]));
             buttons[i/2][i%2].setBackgroundResource(android.R.drawable.btn_default);
         }
-        buttons[emptyX][emptyY].setText("");
+        buttons[emptyX][emptyY].setText(""); //mistake
         buttons[emptyX][emptyY].setBackgroundColor(ContextCompat.getColor(this, R.color.colorFreeButton));
     }
 
     private  void generateNumbers() {
-        int n = 7;
+        int n = 4;
         Random random = new Random();
         while (n > 1) {
             int randomNum = random.nextInt(n--);
@@ -55,7 +56,7 @@ public class gameActivityEasy extends AppCompatActivity {
 
     private boolean isSolvable(){
         int countInversions = 0;
-        for(int i=0; i<7; i++){
+        for(int i=0; i<4; i++){
             for(int j=0; j<i; j++){
                 if(tiles[j]>tiles[i])
                     countInversions++;
@@ -67,7 +68,7 @@ public class gameActivityEasy extends AppCompatActivity {
     }
 
     private void loadNumbers(){
-        tiles = new int[8];
+        tiles = new int[4];
         for (int i =0; i<group.getChildCount() -1; i++){
 
             tiles[i] = i+1;
@@ -79,7 +80,7 @@ public class gameActivityEasy extends AppCompatActivity {
         buttons = new Button[2][2];
 
         for( int i =0; i< group.getChildCount(); i++){
-            buttons[i/4][i%4] = (Button) group.getChildAt(i);
+            buttons[i/2][i%2] = (Button) group.getChildAt(i);
         }
     }
     public void buttononClick(View view){
@@ -98,9 +99,9 @@ public class gameActivityEasy extends AppCompatActivity {
     }
     private  void checkWin(){
         boolean isWin = false;
-        if(emptyX==3&&emptyY==3){
+        if(emptyX==2&&emptyY==2){
             for (int i =0; i<group.getChildCount() - 1; i++){
-                if (buttons[i/4][i%4].getText().toString().equals(String.valueOf(i+1))){
+                if (buttons[i/2][i%2].getText().toString().equals(String.valueOf(i+1))){
                     isWin=true;
                 } else{
                     isWin=false;
@@ -110,9 +111,13 @@ public class gameActivityEasy extends AppCompatActivity {
         }
 
         if(isWin){
-            Toast.makeText(this, "Congratulation", Toast.LENGTH_SHORT).show();
+            AlertDialog.Builder builder = new AlertDialog.Builder(gameActivityEasy.this);
+            builder.setTitle("You win")
+                    .setMessage("Congratulation!")
+                    .setCancelable(true);
+            builder.create().show();
             for(int i =0; i< group.getChildCount(); i++){
-                buttons[i/4][i%4].setClickable(false);
+                buttons[i/2][i%2].setClickable(false);
             }
         }
     }

@@ -14,7 +14,13 @@
         android:theme="@style/Theme.Game15kval"
         tools:targetApi="31">
         <activity
-            android:name=".logIn"
+            android:name=".ResetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".MainProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".Registration"
